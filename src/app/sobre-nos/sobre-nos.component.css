@@ -1,0 +1,22 @@
+.sobre-nos {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.fundadores {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.fundador {
+  text-align: center;
+}
+
+.fundador img {
+  width: 200px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
