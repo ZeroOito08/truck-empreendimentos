@@ -12,7 +12,7 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #333;
-      overflow: hidden; /* Impede rolagem do body */
+      overflow: hidden;
     }
 
     header {
@@ -25,6 +25,10 @@
       left: 0;
       right: 0;
       z-index: 1001;
+    }
+
+    header img {
+      max-height: 60px;
     }
 
     nav {
@@ -48,7 +52,7 @@
 
     .content {
       position: absolute;
-      top: 120px; /* abaixo do header + nav */
+      top: 120px;
       bottom: 0;
       left: 0;
       right: 0;
@@ -101,8 +105,7 @@
 <body>
 
   <header>
-    <h1>Truck Empreendimentos</h1>
-    <p>Soluções sustentáveis, inovação e responsabilidade social</p>
+    <img src="logo-truck.png" alt="Truck Empreendimentos Logo">
   </header>
 
   <nav>
