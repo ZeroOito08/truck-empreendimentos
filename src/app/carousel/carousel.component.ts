@@ -1,6 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { CAROUSEL_SLIDES, CarouselSlide } from '../configs/carousel-config'
 
 // Instala os módulos do Swiper
 Swiper.use([Navigation, Pagination, Autoplay]);
@@ -11,6 +12,8 @@ Swiper.use([Navigation, Pagination, Autoplay]);
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements AfterViewInit {
+
+  public slides: CarouselSlide[] = CAROUSEL_SLIDES;
 
   constructor() { }
 

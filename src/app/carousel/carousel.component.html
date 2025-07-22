@@ -1,20 +1,14 @@
 <div class="swiper-container">
   <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1599282436737-14547b744573?q=80&w=2070&auto=format&fit=crop" alt="Caminhão na estrada">
-      <div class="slide-text">TRUCK EMPREENDIMENTOS</div>
-    </div>
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1621947082348-f02be1b8a1e3?q=80&w=2070&auto=format&fit=crop" alt="Painéis Solares">
-      <div class="slide-text">Inovação e Sustentabilidade</div>
-    </div>
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1560518883-ce09059ee445?q=80&w=1934&auto=format&fit=crop" alt="Interior de um imóvel moderno">
-      <div class="slide-text">Construindo o Futuro</div>
+    <!-- O *ngFor cria um slide para cada item no nosso array 'slides' -->
+    <div *ngFor="let slide of slides" class="swiper-slide">
+      <img [src]="slide.src" [alt]="slide.alt">
+      <div class="slide-text">{{ slide.text }}</div>
     </div>
   </div>
-  <div class="swiper-pagination"></div>
 
+  <!-- Controles do Swiper permanecem os mesmos -->
+  <div class="swiper-pagination"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
