@@ -1,59 +1,18 @@
-/* .header-container {
-  background-color: #000;
-  width: 100%;
-  padding: 0.5rem 0;
-  box-sizing: border-box;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1400px;
-  margin: 0 auto;
-  height: 80px;
-}
-
-.branding {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 0 10rem;
-}
-
-.logo {
-  height: 60px;
-  width: auto;
-}
-
-.slogan {
-  color: #f0f0f0;
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
-
-.menu {
-  display: flex;
-  gap: 1.2rem;
-  padding: 0 10rem;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.menu a:hover {
-  color: #ffcc00;
-} */
-
-/* src/app/shared/header/header.component.css */
+/* Conteúdo para: src/app/shared/header/header.component.css */
 
 .site-header {
-  /* Fundo preto, como solicitado */
   background-color: #ec951a;
   padding: 10px 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+/* Adiciona um espaço no topo da página para o conteúdo não ficar atrás do header fixo */
+:host-context(body) {
+  padding-top: 80px; /* Ajuste este valor se a altura do seu header mudar */
 }
 
 .header-container {
@@ -68,7 +27,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0 10rem;
+  /* Removido o padding excessivo que causava problemas de layout */
 }
 
 .logo img {
@@ -77,13 +36,46 @@
 }
 
 .slogan {
-  color: #ccc;
-  font-size: 14px;
+  color: white; /* ALTERADO: Melhor contraste no fundo laranja */
+  font-size: 1rem; /* Ajuste de tamanho para melhor encaixe */
   font-style: italic;
+  white-space: nowrap; /* Impede que o slogan quebre a linha */
 }
 
 @media (max-width: 900px) {
   .slogan {
     display: none;
   }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  /* Removido flex-wrap e gap para controle manual com o separador */
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+  padding: 0 15px; /* Adicionado padding para espaçamento */
+}
+
+.navigation a:hover {
+  color: #333; /* Cor de hover mais escura para contraste */
+}
+
+/* Adiciona o separador '|' entre os links */
+.navigation a:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  color: white;
+  font-weight: 100;
+}
+
+/* Adiciona um posicionamento relativo para o separador funcionar */
+.navigation a {
+    position: relative;
 }
