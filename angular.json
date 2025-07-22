@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "truck-empreendimentos:build:production"
+              "buildTarget": "truck-empreendimentos:build:production"
             },
             "development": {
-              "browserTarget": "truck-empreendimentos:build:development"
+              "buildTarget": "truck-empreendimentos:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "truck-empreendimentos:build"
+            "buildTarget": "truck-empreendimentos:build"
           }
         },
         "test": {
