@@ -1,122 +1,3 @@
-/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-
-:host {
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
-
-.site-footer {
-  background: #111;
-  color: #a0a0a0;
-  padding: 45px 0 20px;
-  font-size: 15px;
-  line-height: 24px;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.footer-section {
-  width: 45%;
-  margin-bottom: 30px;
-}
-
-.footer-section h2 {
-  color: #fff;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.logo-text {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.logo-text span {
-  color: #f0ad4e;
-}
-
-.contact span {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.socials a {
-  color: #737373;
-  margin-right: 15px;
-  font-size: 20px;
-  transition: color 0.3s;
-}
-
-.socials a:hover {
-  color: #f0ad4e;
-}
-
-.partner-logos {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.partner-logos img {
-  max-width: 100px;
-  filter: grayscale(100%) opacity(0.6);
-  transition: filter 0.3s;
-}
-
-.partner-logos img:hover {
-  filter: grayscale(0%) opacity(1);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #333;
-}
-
-.scroll-to-top {
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-  background: #f0ad4e;
-  color: #111;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.scroll-to-top:hover {
-  background: #fff;
-  transform: translateY(-5px);
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-  }
-  .footer-section {
-    width: 100%;
-  }
-} */
-
-/* Importa os ícones do Font Awesome, caso ainda não tenha */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 :host {
@@ -124,8 +5,9 @@
 }
 
 .site-footer {
-  background-color: #242424;
-  color: #ccc;
+  /* Cores do Header */
+  background-color: #ec951a;
+  color: #fff;
   padding: 60px 0 20px 0;
 }
 
@@ -143,11 +25,9 @@
 }
 
 .footer-logo {
-  max-width: 200px;
+  max-width: 180px; /* Tamanho ajustado para o novo logo */
   margin-bottom: 20px;
-  background-color: #fff; /* Adiciona um fundo para o logo se destacar */
-  padding: 10px;
-  border-radius: 5px;
+  /* Removido o fundo branco que não é mais necessário */
 }
 
 .footer-column h4 {
@@ -155,7 +35,8 @@
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 20px;
-  border-bottom: 2px solid #f0ad4e; /* Laranja da sua marca */
+  /* Borda branca para destacar no fundo laranja */
+  border-bottom: 2px solid #fff;
   padding-bottom: 10px;
 }
 
@@ -166,7 +47,8 @@
 }
 
 .footer-column ul li a {
-  color: #ccc;
+  /* Cor branca para os links */
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s, padding-left 0.3s;
   display: block;
@@ -174,7 +56,8 @@
 }
 
 .footer-column ul li a:hover {
-  color: #f0ad4e;
+  /* Cor escura no hover, como no header */
+  color: #333;
   padding-left: 5px;
 }
 
@@ -184,8 +67,9 @@
 
 .social-icons a {
   display: inline-block;
-  color: #242424;
-  background-color: #ccc;
+  /* Círculo branco com ícone laranja */
+  color: #ec951a;
+  background-color: #fff;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -197,7 +81,8 @@
 }
 
 .social-icons a:hover {
-  background-color: #f0ad4e;
+  /* Cor escura no hover, como no header */
+  background-color: #333;
   color: #fff;
 }
 
@@ -205,30 +90,7 @@
   text-align: center;
   margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid #444;
+  /* Borda branca sutil */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 14px;
-}
-
-.scroll-to-top {
-  position: fixed; /* Mude de 'absolute' para 'fixed' */
-  bottom: 30px;
-  right: 30px;
-  background: #f0ad4e;
-  color: #111;
-  border: none;
-  width: 50px;   /* Um pouco maior para melhor toque */
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  z-index: 1001; /* Garante que ele fique acima de tudo */
-  
-  /* Adicionando controle de visibilidade */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
 }
