@@ -11,7 +11,7 @@ export interface CarouselSlide {
 export const CAROUSEL_SLIDES: CarouselSlide[] = [
   {
     src: 'assets/images/carousel/ciclo_pneu_truck.jpg',
-    alt: 'Ciclo do PNEU',
+    alt: 'Truck PNEUS - Ciclo do PNEU',
     text: ''
   },
   {
@@ -20,8 +20,8 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
     text: ''
   },
   {
-    src: 'assets/images/carousel/imovel-moderno.jpg',
-    alt: 'Interior de um imóvel moderno e bem iluminado',
-    text: 'Construindo o Futuro'
+    src: 'assets/images/carousel/banner_truck_imoveis.jpg',
+    alt: 'Truck Imoveis',
+    text: ''
   }
 ];
