@@ -1,0 +1,20 @@
+/* src/app/home/home.component.css */
+
+.section-logo {
+  max-height: 80px; /* Define uma altura máxima para os logos */
+  margin-bottom: 25px; /* Adiciona um espaço abaixo do logo */
+  object-fit: contain; /* Garante que o logo não seja distorcido */
+}
+
+/* Adiciona um alinhamento central à seção para os logos ficarem centralizados */
+section {
+  text-align: center;
+}
+
+p {
+  text-align: left; /* Mantém os parágrafos alinhados à esquerda */
+}
+
+.divider {
+  margin-top: 40px;
+}
