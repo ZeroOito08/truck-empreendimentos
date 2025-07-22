@@ -1,10 +1,9 @@
-/* Para usar os ícones, você precisará adicionar o Font Awesome. Veja a nota no final. */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 :host {
   display: block;
   position: relative;
-  overflow: hidden; /* Importante para a animação de "crescimento" */
+  overflow: hidden;
 }
 
 .site-footer {
@@ -44,7 +43,7 @@
 }
 
 .logo-text span {
-  color: #f0ad4e; /* Cor laranja da sua marca */
+  color: #f0ad4e;
 }
 
 .contact span {
@@ -108,7 +107,6 @@
   transform: translateY(-5px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -116,4 +114,121 @@
   .footer-section {
     width: 100%;
   }
+} */
+
+/* Importa os ícones do Font Awesome, caso ainda não tenha */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+:host {
+  display: block;
+}
+
+.site-footer {
+  background-color: #242424;
+  color: #ccc;
+  padding: 60px 0 20px 0;
+}
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-column {
+  line-height: 1.8;
+}
+
+.footer-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+  background-color: #fff; /* Adiciona um fundo para o logo se destacar */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0ad4e; /* Laranja da sua marca */
+  padding-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s, padding-left 0.3s;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a:hover {
+  color: #f0ad4e;
+  padding-left: 5px;
+}
+
+.footer-column p {
+  margin: 0 0 10px 0;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #242424;
+  background-color: #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+
+.scroll-to-top {
+  position: fixed; /* Mude de 'absolute' para 'fixed' */
+  bottom: 30px;
+  right: 30px;
+  background: #f0ad4e;
+  color: #111;
+  border: none;
+  width: 50px;   /* Um pouco maior para melhor toque */
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 1001; /* Garante que ele fique acima de tudo */
+  
+  /* Adicionando controle de visibilidade */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
 }
