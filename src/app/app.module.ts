@@ -7,6 +7,7 @@ import { NavComponent } from './shared/nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     NavComponent,
     HomeComponent,
     ContatoComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule
