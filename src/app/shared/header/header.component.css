@@ -51,10 +51,13 @@
 /* src/app/shared/header/header.component.css */
 
 .site-header {
-  /* Retornando ao fundo preto */
+  /* Fundo preto, como solicitado */
   background-color: #000000;
-  padding: 15px 30px;
-  /* Removendo a posição fixa, o header agora rola com a página */
+  padding: 10px 30px;
+  
+  /* Garantimos que não há nenhuma propriedade 'position: fixed' aqui.
+     O header agora se comportará como um bloco normal e rolará com a página. */
+  border-bottom: 3px solid #f0ad4e; /* Mantendo a linha laranja da sua marca */
 }
 
 .header-container {
@@ -68,7 +71,7 @@
 .branding {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 20px;
   padding: 0 10rem;
 }
 
@@ -78,7 +81,13 @@
 }
 
 .slogan {
-  color: #f0f0f0;
-  font-size: 0.95rem;
-  white-space: nowrap;
+  color: #ccc;
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .slogan {
+    display: none;
+  }
 }
