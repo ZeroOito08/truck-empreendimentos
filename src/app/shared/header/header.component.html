@@ -1,35 +1,26 @@
-<!-- <header class="header-container">
-  <div class="header-content">
-    
-    
-    <div class="branding">
-      <img src="./assets/logo-truck.png" alt="Logo Truck" class="logo" />
-      <p class="slogan">Soluções sustentáveis, inovação e responsabilidade social</p>
-    </div>
-
-   
-    <nav class="menu">
-      <app-nav></app-nav>
-    </nav>
-  </div>
-</header> -->
-
-
 <header class="site-header">
   <div class="header-container">
     <div class="branding">
       <div class="logo">
         <img src="assets/logo_truck_empreendimentos_laranja.png" alt="Truck Empreendimentos Logo">
       </div>
-      <p class="slogan">Soluções sustentáveis, inovação e responsabilidade social</p>
+      <span class="slogan">Soluções sustentáveis, inovação e responsabilidade social</span>
     </div>
-    <nav class="navigation">
-      <a href="#sobre-nos">Sobre Nós</a>
-      <a href="#truckpneus">Truck Pneus</a>
-      <a href="#truckimoveis">Truck Imóveis</a>
-      <a href="#truckenergia">Truck Energia</a>
-      <a href="#contato">Contato</a>
-    </nav>
 
+    <nav class="navigation">
+      <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <ul [class.active]="isMenuOpen">
+        <li><a href="#sobre-nos" (click)="closeMenu()">Sobre Nós</a></li>
+        <li><a href="#truckpneus" (click)="closeMenu()">Truck Pneus</a></li>
+        <li><a href="#truckimoveis" (click)="closeMenu()">Truck Imóveis</a></li>
+        <li><a href="#truckenergia" (click)="closeMenu()">Truck Energia</a></li>
+        <li><a href="#contato" (click)="closeMenu()">Contato</a></li>
+      </ul>
+    </nav>
   </div>
 </header>

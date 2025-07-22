@@ -15,12 +15,12 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
     text: ''
   },
   {
-    src: 'assets/images/carousel/banner_truck_energia.jpg',
+    src: 'assets/images/carousel/banner_truck_energia_1.jpg',
     alt: 'Truck Energia',
     text: ''
   },
   {
-    src: 'assets/images/carousel/banner_truck_imoveis.jpg',
+    src: 'assets/images/carousel/banner_truck_imoveis_1.jpg',
     alt: 'Truck Imoveis',
     text: ''
   }
