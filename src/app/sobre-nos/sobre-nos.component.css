@@ -1,22 +1,91 @@
 .sobre-nos {
-  max-width: 900px;
+  max-width: 1400px;
+  width: 100%;
   margin: auto;
   padding: 2rem 1rem;
 }
 
+
 .fundadores {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  gap: 40px;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 100%; /* antes era 1200px */
+  box-sizing: border-box;
 }
 
-.fundador {
+
+/* Linha vertical central (PIPE) */
+.fundadores::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fundador-esquerda,
+.fundador-direita {
+  width: 48%;
   text-align: center;
 }
 
-.fundador img {
-  width: 200px;
-  border-radius: 12px;
+.fundador-esquerda img,
+.fundador-direita img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
   margin-bottom: 1rem;
+}
+
+.fundador-esquerda h3,
+.fundador-direita h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.fundador-esquerda h4,
+.fundador-direita h4 {
+  color: #555;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.fundador-esquerda p,
+.fundador-direita p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Responsivo (mobile) */
+@media (max-width: 768px) {
+  .fundadores {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .fundadores::before {
+    display: none;
+  }
+
+  .fundador-esquerda,
+  .fundador-direita {
+    width: 100%;
+  }
+
+  .fundador-esquerda,
+  .fundador-direita {
+    flex: 1 1 50%;
+    max-width: 50%;
+    text-align: center;
+  }
+
 }

@@ -1,17 +1,18 @@
 nav {
   display: flex;
-  gap: 1rem;
   justify-content: center;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  align-content: calc(50% - 5);
 }
 
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 0.95rem;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #fbb03b; /* amarelo laranja */
+  color: #fcb040; /* ou cor da sua paleta */
 }
