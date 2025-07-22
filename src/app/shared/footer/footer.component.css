@@ -1,0 +1,119 @@
+/* Para usar os ícones, você precisará adicionar o Font Awesome. Veja a nota no final. */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden; /* Importante para a animação de "crescimento" */
+}
+
+.site-footer {
+  background: #111;
+  color: #a0a0a0;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.footer-section h2 {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.logo-text {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-text span {
+  color: #f0ad4e; /* Cor laranja da sua marca */
+}
+
+.contact span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.socials a {
+  color: #737373;
+  margin-right: 15px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #f0ad4e;
+}
+
+.partner-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.partner-logos img {
+  max-width: 100px;
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.3s;
+}
+
+.partner-logos img:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.scroll-to-top {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background: #f0ad4e;
+  color: #111;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+  background: #fff;
+  transform: translateY(-5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-section {
+    width: 100%;
+  }
+}
