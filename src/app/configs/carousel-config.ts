@@ -15,9 +15,9 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
     text: ''
   },
   {
-    src: 'assets/images/carousel/paineis-solares.jpg',
-    alt: 'Campo com painéis solares refletindo o céu',
-    text: 'Inovação e Sustentabilidade'
+    src: 'assets/images/carousel/banner_truck_energia.jpg',
+    alt: 'Truck Energia',
+    text: ''
   },
   {
     src: 'assets/images/carousel/imovel-moderno.jpg',
