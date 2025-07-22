@@ -2,7 +2,7 @@
 
 .section-logo {
   max-height: 80px; /* Define uma altura máxima para os logos */
-  margin-bottom: 25px; /* Adiciona um espaço abaixo do logo */
+  margin-bottom: 10px; /* Adiciona um espaço abaixo do logo */
   object-fit: contain; /* Garante que o logo não seja distorcido */
 }
 
@@ -12,7 +12,7 @@ section {
 }
 
 p {
-  text-align: left; /* Mantém os parágrafos alinhados à esquerda */
+  text-align: center; /* Mantém os parágrafos alinhados à esquerda */
 }
 
 .divider {
