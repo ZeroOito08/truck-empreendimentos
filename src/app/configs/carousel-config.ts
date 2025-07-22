@@ -10,9 +10,9 @@ export interface CarouselSlide {
 // A palavra 'export' aqui também é essencial.
 export const CAROUSEL_SLIDES: CarouselSlide[] = [
   {
-    src: 'assets/images/carousel/caminhao-estrada.jpg',
-    alt: 'Caminhão em uma estrada ao pôr do sol',
-    text: 'TRUCK EMPREENDIMENTOS'
+    src: 'assets/images/carousel/ciclo_pneu_truck.jpg',
+    alt: 'Ciclo do PNEU',
+    text: ''
   },
   {
     src: 'assets/images/carousel/paineis-solares.jpg',
