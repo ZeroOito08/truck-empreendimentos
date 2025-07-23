@@ -1,0 +1,96 @@
+<section id="coleta" class="coleta-section" #coletaSection>
+  <div class="form-container">
+    <h2>Solicite uma <span class="highlight">Coleta Agora!</span></h2>
+    <p>
+      Está pronto para fazer a diferença e dar aos seus pneus inservíveis um
+      novo propósito? Entre em contato conosco e agende uma coleta. É rápido,
+      fácil e o primeiro passo para um mundo mais sustentável.
+    </p>
+    <form id="coleta-form">
+      <input type="text" name="nome" placeholder="Nome" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="telefone" placeholder="Telefone" required />
+      <textarea name="mensagem" placeholder="Mensagem" rows="5"></textarea>
+
+      <div class="file-input-container">
+        <label for="file-upload" class="file-upload-label">
+          <i class="fas fa-paperclip"></i>
+          Anexar Arquivos
+        </label>
+        <input
+          id="file-upload"
+          type="file"
+          multiple
+          (change)="onFileSelected($event)"
+        />
+      </div>
+
+      <div class="file-list" *ngIf="selectedFiles.length > 0">
+        <strong>Arquivos Selecionados:</strong>
+        <ul>
+          <li *ngFor="let file of selectedFiles; let i = index">
+            <span>{{ file.name }}</span>
+            <button
+              type="button"
+              (click)="removeFile(i)"
+              class="remove-file-btn"
+              title="Remover arquivo"
+            >
+              &times;
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="recaptcha-placeholder">
+        <span>Protegido por reCAPTCHA</span>
+      </div>
+      <button type="submit" class="submit-button">SOLICITAR COLETA</button>
+    </form>
+  </div>
+
+  <div class="pontos-container">
+    <h2>Pontos de <span class="highlight">Coleta</span></h2>
+
+    <div class="ponto-item">
+      <img
+        src="assets/logo_truck_reciclagem_coleta.png"
+        alt="Ícone de reciclagem"
+        class="ponto-icon"
+      />
+      <div class="ponto-info">
+        <h3>Ponto de Coleta SAPEZAL-MT</h3>
+        <p>
+          Localizado: Rua Projetada CSE, Loteamento Comercial Hilario Dal'Alba Scariote, Zona Industrial - CEP 78365-000
+          Sapezal - MT – Fone: (14) 99624-3450
+        </p>
+      </div>
+      <a
+        class="map-button"
+        [href]="getGoogleMapsLink('Rua Projetada CSE, Loteamento Comercial Hilario DalAlba Scariote, Zona Industrial, Sapezal-MT')"
+        target="_blank"
+        >VER MAPA</a
+      >
+    </div>
+
+    <div class="ponto-item">
+      <img
+        src="assets/logo_truck_reciclagem_coleta.png"
+        alt="Ícone de reciclagem"
+        class="ponto-icon"
+      />
+      <div class="ponto-info">
+        <h3>Ponto de Coleta JUARA-MT</h3>
+        <p>
+          Localizado: Avenida Comendador Rodolfo Ferro, 1414, Jardim Panorama
+          Juara - MT – Fone: (14) 99624-3450
+        </p>
+      </div>
+      <a
+        class="map-button"
+        [href]="getGoogleMapsLink('Avenida Comendador Rodolfo Ferro, 1414, Jardim Panorama, Juara-MT')"
+        target="_blank"
+        >VER MAPA</a
+      >
+    </div>
+  </div>
+</section>
