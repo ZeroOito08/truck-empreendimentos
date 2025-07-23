@@ -10,6 +10,8 @@
   },
   "private": true,
   "dependencies": {
+    "@amcharts/amcharts5": "^5.13.4",
+    "@amcharts/amcharts5-geodata": "^5.1.5",
     "@angular/animations": "^18.2.13",
     "@angular/common": "^18.2.13",
     "@angular/compiler": "^18.2.13",

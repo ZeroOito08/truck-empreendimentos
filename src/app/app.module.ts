@@ -10,6 +10,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ParceirosComponent } from './parceiros/parceiros.component';
 import { ColetaComponent } from './coleta/coleta.component';
+import { AreaAtuacaoComponent } from './area-atuacao/area-atuacao.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ColetaComponent } from './coleta/coleta.component';
     ColetaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AreaAtuacaoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
