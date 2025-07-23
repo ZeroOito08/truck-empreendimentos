@@ -64,3 +64,19 @@
   width: 100%;
   height: 500px;
 }
+
+.mapa-container {
+  order: 1; /* O mapa será o primeiro item */
+}
+
+.texto-container {
+  order: 2; /* O texto será o segundo item */
+}
+
+/* Em telas pequenas, volta ao layout vertical padrão */
+@media (max-width: 768px) {
+  .mapa-container,
+  .texto-container {
+    order: 0; /* Reseta a ordem */
+  }
+}  
