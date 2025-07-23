@@ -18,3 +18,71 @@ p {
 .divider {
   margin-top: 40px;
 }
+
+/* Container principal para o layout em colunas */
+.empresas-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha o conteúdo das colunas no topo */
+  gap: 2rem; /* Espaçamento entre as colunas */
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Define cada coluna */
+.empresa-coluna {
+  flex: 1; /* Faz cada coluna ocupar o mesmo espaço */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo da seção */
+  text-align: center;
+}
+
+/* O separador vertical (o "pipe") */
+.separador-vertical {
+  width: 2px;
+  background-color: #f29201; /* Cor laranja do seu tema */
+  align-self: stretch; /* Faz o separador esticar pela altura do container */
+}
+
+/* Estilos para os parágrafos, para diferenciá-los */
+.empresa-slogan {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.empresa-texto {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ----- Seção Responsiva para Celulares ----- */
+@media (max-width: 992px) {
+  .empresas-container {
+    flex-direction: column; /* Empilha as colunas */
+    align-items: center;
+    gap: 0;
+  }
+
+  .separador-vertical {
+    display: none; /* Oculta o separador vertical */
+  }
+
+  .empresa-coluna {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    /* Adiciona um separador horizontal em telas pequenas */
+    border-bottom: 2px solid #f29201;
+  }
+
+  /* Remove a borda do último item para não ficar sobrando */
+  .empresa-coluna:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
