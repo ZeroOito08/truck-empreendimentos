@@ -52,3 +52,27 @@ button {
 button:hover {
   background: #004080;
 }
+
+/* Adicione este código ao seu arquivo styles.css */
+
+/* --- ESTILO DE BOTÃO PRIMÁRIO --- */
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: #ff9800; /* Cor principal Laranja */
+  color: #ffffff; /* Texto branco */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase; /* Para deixar o texto em maiúsculas como no botão de coleta */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: inline-block; /* Garante comportamento consistente */
+  text-decoration: none; /* Remove sublinhado se usado em uma tag <a> */
+}
+
+.btn-primary:hover {
+  background-color: #e68a00; /* Um tom de laranja mais escuro para o hover */
+}

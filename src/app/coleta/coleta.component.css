@@ -1,4 +1,4 @@
-/* Importando uma fonte do Google para se aproximar de um design comum */
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 .coleta-section {
@@ -11,7 +11,7 @@
     margin: 40px auto;
     background-color: #ffffff;
     color: #000000;
-    /* Adicionado para o alinhamento vertical */
+   
     align-items: flex-start;
 }
 
@@ -28,14 +28,14 @@ h2 {
 }
 
 .highlight {
-    color: #ff9800; /* Laranja */
+    color: #ff9800; 
     text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-thickness: 3px;
     text-underline-offset: 8px;
 }
 
-/* Estilos do Formulário */
+
 .form-container p {
     margin-bottom: 30px;
     line-height: 1.6;
@@ -59,7 +59,7 @@ h2 {
     padding: 15px;
     border-radius: 30px;
     border: none;
-    background-color: #ff9800; /* Laranja */
+    background-color: #ff9800; 
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: bold;
@@ -71,7 +71,7 @@ h2 {
     background-color: #e68a00;
 }
 
-/* Estilos dos Pontos de Coleta */
+
 .ponto-item {
     background-color: #f8f8f8;
     color: #333333;
@@ -107,7 +107,7 @@ h2 {
 }
 
 .map-button {
-    background-color: #ff9800; /* Laranja */
+    background-color: #ff9800; 
     color: #ffffff;
     padding: 10px 15px;
     border-radius: 8px;
@@ -123,7 +123,6 @@ h2 {
     background-color: #e68a00;
 }
 
-/* Estilos do campo de upload de arquivos */
 .file-input-container input[type="file"] {
   display: none;
 }
@@ -200,18 +199,219 @@ h2 {
     font-size: 0.8rem;
 }
 
-/* --- REGRAS NOVAS PARA O ALINHAMENTO VERTICAL --- */
 
 .pontos-container {
-  margin-top: 135px; /* Ajuste este valor conforme necessário */
+  margin-top: 135px; 
 }
 
-@media (max-width: 960px) { /* Ajuste o ponto de quebra se necessário */
+@media (max-width: 960px) { 
   .coleta-section {
-    /* Centraliza os itens quando empilhados */
     align-items: center;
   }
   .pontos-container {
-    margin-top: 40px; /* Reduz ou remove a margem em telas menores */
+    margin-top: 40px; 
+  }
+} */
+
+/* src/app/coleta/coleta.component.css */
+
+.coleta-section {
+  display: flex;
+  flex-direction: column; /* Organiza as seções principais verticalmente */
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+}
+
+/* --- Seção Superior (Formulário) --- */
+
+.coleta-top-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative; /* Necessário para posicionar o botão */
+  padding-bottom: 80px; /* Espaço para o botão não sobrepor o divisor */
+}
+
+.coleta-text-column,
+.coleta-form-column {
+  flex: 1; /* Faz as duas colunas terem o mesmo tamanho */
+  min-width: 300px;
+}
+
+.coleta-text-column {
+  text-align: right; /* Alinha todo o texto da coluna da esquerda à direita */
+}
+
+.coleta-text-column h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.coleta-text-column p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+
+.highlight {
+  color: #ff9800; /* Laranja */
+  text-decoration: underline;
+  text-decoration-color: #ff9800;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+/* Inputs do Formulário */
+#coleta-form input,
+#coleta-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 20px; /* Borda um pouco menos redonda */
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* --- Posicionamento Especial do Botão --- */
+
+.btn-primary-coleta {
+  /* Estilo do botão (pode vir de styles.css, mas redefinido aqui para garantir) */
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: #ff9800;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  /* Posicionamento mágico */
+  position: absolute;
+  bottom: 20px; /* Distância do fundo da seção superior */
+  left: 25%;
+  width: 50%; /* Ocupa metade da largura total da seção */
+  transform: translateX(0); /* Ajuste fino se necessário */
+}
+
+.btn-primary-coleta:hover {
+  background-color: #e68a00;
+}
+
+
+/* --- Divisor Ondulado --- */
+
+.wavy-divider {
+  width: 100%;
+  height: 20px;
+  border-bottom: 4px wavy #ff9800;
+  margin: 20px 0 40px 0; /* Espaçamento acima e abaixo */
+}
+
+
+/* --- Seção Inferior (Pontos de Coleta) --- */
+
+.pontos-container {
+  width: 100%;
+  text-align: center; /* Centraliza o título "Pontos de Coleta" */
+}
+
+.pontos-container h2 {
+  margin-bottom: 30px;
+}
+
+.ponto-item {
+  display: flex; /* Alinha ícone, texto e botão na horizontal */
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: left; /* Alinha o texto interno à esquerda */
+  box-sizing: border-box;
+}
+
+.ponto-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+.ponto-info {
+  flex-grow: 1; /* Faz a info ocupar o espaço disponível */
+}
+
+.ponto-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.ponto-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.map-button {
+    background-color: #ff9800;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* --- Outros Estilos (Upload de Arquivo) --- */
+
+.file-input-container { /* Adicionado para compatibilidade */
+  margin-bottom: 15px;
+}
+
+.file-input-container input[type="file"] {
+  display: none;
+}
+
+.file-upload-label {
+  display: block;
+  padding: 12px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .coleta-text-column {
+    text-align: center; /* Centraliza o texto em telas menores */
+  }
+  
+  .btn-primary-coleta {
+    position: static; /* Remove o posicionamento absoluto */
+    width: 100%; /* Ocupa a largura total */
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .coleta-top-section {
+    padding-bottom: 0; /* Remove o padding extra */
   }
 }
