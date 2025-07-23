@@ -61,9 +61,10 @@ export class ColetaComponent implements AfterViewInit {
     this.selectedFiles.splice(index, 1);
   }
 
-  // Função para o Google Maps (continua igual)
   getGoogleMapsLink(address: string): string {
     const encodedAddress = encodeURIComponent(address);
+    // Esta é a URL correta para buscar um endereço no Google Maps
     return `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
   }
+  
 }
