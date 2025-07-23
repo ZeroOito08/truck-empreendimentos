@@ -1,0 +1,14 @@
+h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.highlight {
+    color: #ff9800; /* Laranja */
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}

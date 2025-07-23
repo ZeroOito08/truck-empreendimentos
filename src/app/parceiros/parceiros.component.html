@@ -1,4 +1,4 @@
-<section class="parceiros-section">
+<!-- <section class="parceiros-section">
   <h2>Nossos Parceiros</h2>
   <div class="scroller" data-animated="true">
     <ul class="scroller__inner">
@@ -12,5 +12,19 @@
       <li><img src="assets/images/parceiros/parceiro_logo_verdera.png" alt="Verdera"></li>
       <li><img src="assets/images/parceiros/parceiro_logo_votorantim.png" alt="Votorantim"></li>
     </ul>
+  </div>
+</section> -->
+
+<section id="parceiros" class="parceiros-section" #sectionTitle>
+  <h2>Nossos <span class="highlight">Parceiros</span></h2>
+
+  <div class="slider">
+    <div class="slide-track">
+
+      <div class="slide" *ngFor="let parceiro of parceirosAnimados">
+        <img [src]="parceiro.logo" [alt]="parceiro.nome">
+      </div>
+
+    </div>
   </div>
 </section>

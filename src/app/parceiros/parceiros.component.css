@@ -1,7 +1,7 @@
-.parceiros-section {
+/* .parceiros-section {
   padding: 60px 0;
   text-align: center;
-  overflow-x: hidden; /* Previne barras de rolagem indesejadas */
+  overflow-x: hidden; 
 }
 
 .parceiros-section h2 {
@@ -14,30 +14,28 @@
 .scroller {
   max-width: 1200px;
   margin: auto;
-  /* A máscara cria o efeito de fade nas bordas para uma entrada e saída mais suave */
+  
   -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 .scroller__inner {
   display: flex;
-  flex-wrap: nowrap; /* Garante que os itens não quebrem a linha */
-  width: max-content; /* O container se ajusta à largura de todos os logos */
-  gap: 60px; /* Aumentamos o espaço para melhor visualização */
-  
-  /* A animação é definida aqui */
+  flex-wrap: nowrap; 
+  width: max-content; 
+  gap: 60px; 
+ 
   animation: scroll 40s linear infinite;
 }
 
-/* A animação em si */
+
 @keyframes scroll {
   to {
-    /* Move o container para a esquerda pelo comprimento da primeira lista de logos */
-    transform: translate(calc(-50% - 30px)); /* -50% da largura menos metade do 'gap' */
+    
+    transform: translate(calc(-50% - 30px)); 
   }
 }
 
-/* Pausa a animação ao passar o rato por cima */
 .scroller:hover .scroller__inner {
   animation-play-state: paused;
 }
@@ -47,17 +45,105 @@
 }
 
 .scroller__inner img {
-  height: 60px; /* Mantém a altura consistente */
-  max-width: 180px; /* Limita a largura máxima */
-  object-fit: contain; /* Garante que a proporção seja mantida */
+  height: 60px; 
+  max-width: 180px; 
+  object-fit: contain; 
   filter: grayscale(100%);
   opacity: 0.7;
   transition: all 0.3s ease;
 }
 
-/* Efeito de hover na imagem individual */
 .scroller__inner img:hover {
   filter: grayscale(0%);
   opacity: 1;
+  transform: scale(1.1);
+} */
+
+/* src/app/parceiros/parceiros.component.css */
+
+.parceiros-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.highlight {
+    color: #ff9800; /* Laranja */
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+/* .parceiros-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+  color: #ff9800
+} */
+
+/* O contêiner principal que esconde o excesso */
+.slider {
+  height: 100px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden; /* Essencial para esconder os logos fora da área visível */
+}
+
+/* O "trilho" que se move */
+.slide-track {
+  display: flex;
+  /* (Número de logos originais + duplicados) * (largura de cada logo) */
+  /* 18 logos * 250px = 4500px */
+  width: calc(250px * 18);
+  animation: scroll 40s linear infinite;
+}
+
+/* Pausa a animação quando o mouse está sobre o slider */
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+/* A animação de rolagem */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move para a esquerda pela largura da lista original de logos */
+    /* 9 logos * 250px = 2250px */
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+/* Cada logo individual */
+.slide {
+  height: 100px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.slide img {
+  max-height: 80px;
+  max-width: 180px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover no logo individual */
+.slide img:hover {
+  filter: grayscale(0%);
   transform: scale(1.1);
 }
