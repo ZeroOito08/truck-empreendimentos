@@ -8,25 +8,27 @@
     max-width: 1200px;
     width: 100%;
     padding: 40px;
-    margin: 40px auto; /* Adicionado margem para espaçamento */
+    margin: 40px auto;
     background-color: #ffffff;
     color: #000000;
+    /* Adicionado para o alinhamento vertical */
+    align-items: flex-start;
 }
 
 .form-container, .pontos-container {
-    flex: 1; /* Faz com que ambos ocupem o espaço disponível */
-    min-width: 300px; /* Largura mínima antes de quebrar a linha */
+    flex: 1;
+    min-width: 300px;
 }
 
 h2 {
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 20px;
-    color: #000000; /* Título preto */
+    color: #000000;
 }
 
 .highlight {
-    color: #ff9800; /* Cor laranja do destaque (você pode ajustar a tonalidade) */
+    color: #ff9800; /* Laranja */
     text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-thickness: 3px;
@@ -37,7 +39,7 @@ h2 {
 .form-container p {
     margin-bottom: 30px;
     line-height: 1.6;
-    color: #333333; /* Uma tonalidade de preto mais suave para o texto corrido */
+    color: #333333;
 }
 
 #coleta-form input,
@@ -46,21 +48,10 @@ h2 {
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 30px;
-    border: 1px solid #ccc; /* Adicionando uma borda sutil aos campos */
-    font-size: 1rem;
-    box-sizing: border-box; /* Garante que o padding não afete a largura total */
-    color: #000000; /* Texto dentro dos campos preto */
-}
-
-.recaptcha-placeholder {
-    padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    color: #555;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: #000000;
 }
 
 .submit-button {
@@ -69,7 +60,7 @@ h2 {
     border-radius: 30px;
     border: none;
     background-color: #ff9800; /* Laranja */
-    color: #ffffff; /* Texto branco no botão */
+    color: #ffffff;
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
@@ -77,24 +68,20 @@ h2 {
 }
 
 .submit-button:hover {
-    background-color: #e68a00; /* Um tom de laranja mais escuro no hover */
+    background-color: #e68a00;
 }
 
 /* Estilos dos Pontos de Coleta */
-.pontos-container h2 {
-    margin-top: 0; /* Removendo a margem superior do título nos pontos de coleta */
-}
-
 .ponto-item {
-    background-color: #f8f8f8; /* Um tom de branco mais claro para os itens */
+    background-color: #f8f8f8;
     color: #333333;
-    border-radius: 10px; /* Bordas um pouco menos arredondadas */
+    border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
-    border: 1px solid #eee; /* Adicionando uma borda sutil aos itens */
+    border: 1px solid #eee;
 }
 
 .ponto-icon {
@@ -109,14 +96,14 @@ h2 {
 .ponto-info h3 {
     margin: 0 0 5px 0;
     font-size: 1.1rem;
-    color: #000000; /* Título do ponto de coleta preto */
+    color: #000000;
 }
 
 .ponto-info p {
     margin: 0;
     font-size: 0.9rem;
     line-height: 1.4;
-    color: #555555; /* Texto da informação do ponto de coleta em um tom de cinza */
+    color: #555555;
 }
 
 .map-button {
@@ -128,35 +115,19 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-    white-space: nowrap; /* Impede que o texto quebre */
+    white-space: nowrap;
     font-size: 0.9rem;
 }
 
 .map-button:hover {
-    background-color: #e68a00; /* Tom de laranja mais escuro no hover */
+    background-color: #e68a00;
 }
 
-/* Estilos para telas menores (opcional - para melhorar a responsividade) */
-@media (max-width: 768px) {
-    .coleta-section {
-        flex-direction: column; /* Empilha os contêineres em telas menores */
-    }
-
-    .form-container, .pontos-container {
-        width: 100%;
-    }
-}
-
-/* Adicione estas novas regras de estilo ao final do seu arquivo coleta.component.css */
-
-/* --- ESTILOS PARA O CAMPO DE UPLOAD --- */
-
-/* Esconde o input de arquivo padrão */
+/* Estilos do campo de upload de arquivos */
 .file-input-container input[type="file"] {
   display: none;
 }
 
-/* Estiliza o label para parecer um botão */
 .file-upload-label {
   display: inline-block;
   padding: 12px 20px;
@@ -175,12 +146,6 @@ h2 {
 .file-upload-label:hover {
   background-color: #e0e0e0;
 }
-
-.file-upload-label .fas {
-  margin-right: 8px;
-}
-
-/* --- ESTILOS PARA A LISTA DE ARQUIVOS --- */
 
 .file-list {
   margin-top: 10px;
@@ -222,4 +187,31 @@ h2 {
   font-weight: bold;
   cursor: pointer;
   padding: 0 5px;
+}
+
+.recaptcha-placeholder {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #555;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* --- REGRAS NOVAS PARA O ALINHAMENTO VERTICAL --- */
+
+.pontos-container {
+  margin-top: 135px; /* Ajuste este valor conforme necessário */
+}
+
+@media (max-width: 960px) { /* Ajuste o ponto de quebra se necessário */
+  .coleta-section {
+    /* Centraliza os itens quando empilhados */
+    align-items: center;
+  }
+  .pontos-container {
+    margin-top: 40px; /* Reduz ou remove a margem em telas menores */
+  }
 }
