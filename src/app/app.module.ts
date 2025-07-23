@@ -17,7 +17,6 @@ import { AreaAtuacaoComponent } from './area-atuacao/area-atuacao.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ContatoComponent,
     SobreNosComponent,
     CarouselComponent,
     FooterComponent,
@@ -26,6 +25,7 @@ import { AreaAtuacaoComponent } from './area-atuacao/area-atuacao.component';
   ],
   imports: [
     BrowserModule,
+    ContatoComponent,
     AreaAtuacaoComponent
   ],
   providers: [],

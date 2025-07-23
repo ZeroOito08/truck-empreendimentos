@@ -1,4 +1,4 @@
-<div class="content" id="contato">
+<!-- <div class="content" id="contato">
   <section>
     <h2>Nosso <span class="highlight">Contato</span></h2>
     <form action="#" method="POST">
@@ -8,4 +8,52 @@
       <button type="submit" class="btn-primary">Enviar</button>
     </form>
   </section>
-</div>
+</div> -->
+
+<section class="contato-section">
+  <div class="contato-container">
+
+    <div class="info-coluna">
+      <h2>Entre em Contato</h2>
+      <p>Estamos prontos para atender você. Escolha um dos canais abaixo ou preencha o formulário ao lado.</p>
+
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:contato@trkpneus.com.br">contato&#64;trkpneus.com.br</a>
+      </div>
+
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+        <span>65 99232-6475</span>
+      </div>
+
+      <a href="https://wa.me/5565992326475" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+        Iniciar Conversa no WhatsApp
+      </a>
+    </div>
+
+    <div class="form-coluna">
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required ngModel></textarea>
+        </div>
+        <button type="submit" [disabled]="!contactForm.valid">Enviar Mensagem</button>
+      </form>
+    </div>
+
+  </div>
+</section>

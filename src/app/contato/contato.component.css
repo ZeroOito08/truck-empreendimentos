@@ -12,3 +12,151 @@ h2 {
     text-decoration-thickness: 3px;
     text-underline-offset: 8px;
 }
+
+.contato-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9; /* Um fundo suave para a seção */
+}
+
+.contato-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem; /* Espaço entre as colunas */
+  flex-wrap: wrap; /* Para responsividade */
+}
+
+/* Coluna da Esquerda (Informações) */
+.info-coluna {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-coluna h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.info-coluna p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.info-item i {
+  color: #f29201; /* Cor laranja do tema */
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  width: 25px; /* Alinhamento dos ícones */
+  text-align: center;
+}
+
+.info-item a, .info-item span {
+  color: #333;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #25D366; /* Cor oficial do WhatsApp */
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1DAE54;
+}
+
+.whatsapp-button i {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+/* Coluna da Direita (Formulário) */
+.form-coluna {
+  flex: 1.5; /* Faz a coluna do formulário um pouco maior */
+  min-width: 320px;
+}
+
+/* Estilos existentes do formulário - você pode ajustar conforme necessário */
+.form-coluna form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f29201;
+  box-shadow: 0 0 5px rgba(242, 146, 1, 0.5);
+}
+
+.form-coluna button {
+  padding: 15px;
+  background-color: #f29201;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-coluna button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.form-coluna button:not(:disabled):hover {
+  background-color: #d88000;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .contato-container {
+    flex-direction: column;
+  }
+}
