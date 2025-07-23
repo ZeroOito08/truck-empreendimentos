@@ -76,3 +76,31 @@ button:hover {
 .btn-primary:hover {
   background-color: #e68a00; /* Um tom de laranja mais escuro para o hover */
 }
+
+/* src/styles.css */
+
+/* Box-sizing universal para um controle de layout mais previsível */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Imagens responsivas por padrão */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Define uma fonte base fluida */
+body {
+  font-size: 16px; /* Fonte base para desktop */
+}
+
+/* Para telas muito pequenas (smartwatches), reduzimos a fonte base */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}

@@ -1,7 +1,10 @@
-/* --- Estilos de Base e Desktop (o visual que você preferia) --- */
+/* --- Estilos de Base e Desktop (Seu visual, mantido) --- */
 .site-header {
-  background-color: #f29201; /* Fundo preto */
+  background-color: #f29201; /* Seu fundo preto */
   padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Garante que o header fique sobre o conteúdo */
 }
 
 .header-container {
@@ -32,13 +35,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Menu horizontal no desktop */
+  display: flex;
   align-items: center;
   gap: 20px;
 }
 
 .navigation a {
-  color: white; /* Links brancos */
+  color: white;
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
@@ -47,7 +50,7 @@
 }
 
 .navigation a:hover {
-  color: #f0ad4e; /* Efeito hover laranja */
+  color: #f0ad4e; /* Seu efeito hover laranja */
 }
 
 /* O botão hambúrguer fica escondido no desktop */
@@ -55,8 +58,7 @@
   display: none;
 }
 
-
-/* --- Media Queries para Responsividade --- */
+/* --- Media Queries para Responsividade (Seu código, garantido) --- */
 
 /* Esconde o slogan em telas médias para dar mais espaço */
 @media (max-width: 992px) {
@@ -73,7 +75,8 @@
     cursor: pointer;
     background: none;
     border: none;
-    z-index: 1010; /* Garante que fique acima de outros elementos */
+    padding: 0; /* Garante que não haja preenchimento extra */
+    z-index: 1010; /* Garante que fique acima do menu */
   }
 
   /* Esconde o menu de desktop e o prepara para o modo mobile */
@@ -84,7 +87,7 @@
     width: 70%;
     max-width: 300px;
     height: 100vh;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Fundo escuro consistente */
     box-shadow: -5px 0 15px rgba(0,0,0,0.2);
     flex-direction: column;
     justify-content: center;
@@ -98,16 +101,35 @@
   .navigation ul.active {
     right: 0;
   }
+  
+  .navigation ul a:hover {
+    background-color: #f0ad4e;
+    color: #1a1a1a; /* Melhor contraste no hover */
+    border-radius: 5px;
+  }
 }
 
-
-/* --- Estilos do Ícone Hambúrguer (animação de X) --- */
+/* --- Estilos do Ícone Hambúrguer (Sua animação, garantida) --- */
 .hamburger-box { display: inline-block; position: relative; width: 30px; height: 24px; }
 .hamburger-inner { display: block; top: 50%; margin-top: -2px; }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { width: 30px; height: 3px; background-color: #fff; border-radius: 4px; position: absolute; transition: transform .2s ease-in-out; }
 .hamburger-inner::before, .hamburger-inner::after { content: ''; display: block; }
 .hamburger-inner::before { top: -10px; }
 .hamburger-inner::after { bottom: -10px; }
-.hamburger.active .hamburger-inner { transform: rotate(225deg); }
-.hamburger.active .hamburger-inner::before { top: 0; transform: rotate(90deg); }
-.hamburger.active .hamburger-inner::after { bottom: 0; display: none; }
+
+/* Animação para o 'X' */
+.hamburger.active .hamburger-inner {
+  transform: rotate(225deg);
+  background-color: #fff; /* Garante que o 'X' seja branco */
+}
+
+.hamburger.active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(90deg);
+  background-color: #fff; /* Garante que a barra seja branca */
+}
+
+.hamburger.active .hamburger-inner::after {
+  bottom: 0;
+  display: none; /* Sua animação original */
+}
