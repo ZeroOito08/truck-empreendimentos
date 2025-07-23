@@ -8,6 +8,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ParceirosComponent } from './parceiros/parceiros.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     ContatoComponent,
     SobreNosComponent,
     CarouselComponent,
-    FooterComponent
+    FooterComponent,
+    ParceirosComponent
   ],
   imports: [
     BrowserModule

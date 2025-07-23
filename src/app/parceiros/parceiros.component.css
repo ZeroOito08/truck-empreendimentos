@@ -1,0 +1,58 @@
+.parceiros-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.parceiros-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.scroller {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  /* Efeito de fade nas laterais para um visual mais suave */
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller__inner {
+  display: flex;
+  gap: 40px;
+  padding-block: 1rem;
+  width: max-content; /* Faz o container ter a largura de todo o seu conteúdo */
+  
+  /* Animação */
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    /* Move o container para a esquerda pela metade do seu comprimento total */
+    transform: translateX(calc(-50% - 20px)); /* -50% e metade do gap */
+  }
+}
+
+.scroller__inner:hover {
+  animation-play-state: paused; /* Pausa a animação ao passar o rato */
+}
+
+.scroller__inner li {
+  list-style: none;
+}
+
+.scroller__inner img {
+  height: 60px; /* Todas as logos com a mesma altura */
+  max-width: 200px;
+  filter: grayscale(100%); /* Deixa em preto e branco por padrão */
+  opacity: 0.8;
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.scroller__inner img:hover {
+  filter: grayscale(0%); /* Deixa colorido ao passar o rato */
+  opacity: 1;
+}
