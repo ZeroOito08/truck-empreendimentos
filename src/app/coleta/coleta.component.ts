@@ -13,9 +13,6 @@ export class ColetaComponent implements AfterViewInit {
 
   @ViewChild('coletaSection') coletaSection!: ElementRef;
 
-  // Array para armazenar os arquivos selecionados
-  selectedFiles: File[] = [];
-
   constructor() { }
 
   ngAfterViewInit(): void {
@@ -35,30 +32,6 @@ export class ColetaComponent implements AfterViewInit {
         toggleActions: 'play none none reset'
       }
     });
-  }
-
-  // --- LÓGICA PARA MANIPULAR ARQUIVOS ---
-
-  /**
-   * Chamado quando o usuário seleciona arquivos no input.
-   * @param event O evento do input de arquivo.
-   */
-  onFileSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    if (input.files) {
-      // Adiciona os novos arquivos à lista existente
-      for (let i = 0; i < input.files.length; i++) {
-        this.selectedFiles.push(input.files[i]);
-      }
-    }
-  }
-
-  /**
-   * Remove um arquivo da lista de selecionados.
-   * @param index O índice do arquivo a ser removido.
-   */
-  removeFile(index: number): void {
-    this.selectedFiles.splice(index, 1);
   }
 
   getGoogleMapsLink(address: string): string {
