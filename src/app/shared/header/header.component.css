@@ -1,10 +1,10 @@
 /* --- Estilos de Base e Desktop (Seu visual, mantido) --- */
 .site-header {
-  background-color: #f29201; /* Seu fundo preto */
+  background-color: #f29201; /* Seu fundo laranja */
   padding: 10px 30px;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Garante que o header fique sobre o conteúdo */
+  z-index: 1000;
 }
 
 .header-container {
@@ -37,7 +37,21 @@
   padding: 0;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0.2rem; /* --- ESPAÇAMENTO REDUZIDO --- */
+}
+
+.navigation li {
+  position: relative; /* Necessário para o posicionamento do pipe */
+  display: flex;
+  align-items: center;
+}
+
+/* Adiciona o pipe antes de cada item, exceto o primeiro */
+.navigation li:not(:first-child)::before {
+  content: '|';
+  color: #ffffff; /* Cor do pipe */
+  font-weight: lighter;
+  padding-right: 0.2rem; /* Espaçamento à direita do pipe */
 }
 
 .navigation a {
@@ -45,49 +59,49 @@
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  padding: 10px;
+  padding: 5px; /* Padding ajustado para o novo layout */
   transition: color 0.3s;
 }
 
 .navigation a:hover {
-  color: #f0ad4e; /* Seu efeito hover laranja */
+  color: #f0ad4e;
 }
 
-/* O botão hambúrguer fica escondido no desktop */
 .hamburger {
   display: none;
 }
 
-/* --- Media Queries para Responsividade (Seu código, garantido) --- */
+/* --- Media Queries para Responsividade --- */
 
-/* Esconde o slogan em telas médias para dar mais espaço */
 @media (max-width: 992px) {
   .slogan {
     display: none;
   }
 }
 
-/* Ativa o modo "Hambúrguer" em telas pequenas */
 @media (max-width: 768px) {
-  /* Mostra o botão hambúrguer */
   .hamburger {
     display: block;
     cursor: pointer;
     background: none;
     border: none;
-    padding: 0; /* Garante que não haja preenchimento extra */
-    z-index: 1010; /* Garante que fique acima do menu */
+    padding: 0;
+    z-index: 1010;
+  }
+  
+  /* Remove os pipes no menu mobile */
+  .navigation li:not(:first-child)::before {
+    display: none;
   }
 
-  /* Esconde o menu de desktop e o prepara para o modo mobile */
   .navigation ul {
     position: fixed;
     top: 0;
-    right: -100%; /* Começa fora da tela */
+    right: -100%;
     width: 70%;
     max-width: 300px;
     height: 100vh;
-    background-color: #1a1a1a; /* Fundo escuro consistente */
+    background-color: #1a1a1a;
     box-shadow: -5px 0 15px rgba(0,0,0,0.2);
     flex-direction: column;
     justify-content: center;
@@ -97,39 +111,52 @@
     transition: right 0.4s ease-in-out;
   }
 
-  /* Classe 'active' que o TypeScript adiciona para mostrar o menu */
   .navigation ul.active {
     right: 0;
   }
   
   .navigation ul a:hover {
     background-color: #f0ad4e;
-    color: #1a1a1a; /* Melhor contraste no hover */
+    color: #1a1a1a;
     border-radius: 5px;
   }
 }
 
-/* --- Estilos do Ícone Hambúrguer (Sua animação, garantida) --- */
+/* --- Estilos do Ícone Hambúrguer --- */
 .hamburger-box { display: inline-block; position: relative; width: 30px; height: 24px; }
-.hamburger-inner { display: block; top: 50%; margin-top: -2px; }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { width: 30px; height: 3px; background-color: #fff; border-radius: 4px; position: absolute; transition: transform .2s ease-in-out; }
 .hamburger-inner::before, .hamburger-inner::after { content: ''; display: block; }
+.hamburger-inner { display: block; top: 50%; margin-top: -2px; }
 .hamburger-inner::before { top: -10px; }
 .hamburger-inner::after { bottom: -10px; }
 
-/* Animação para o 'X' */
-.hamburger.active .hamburger-inner {
-  transform: rotate(225deg);
-  background-color: #fff; /* Garante que o 'X' seja branco */
+.hamburger.active .hamburger-inner { transform: rotate(225deg); background-color: #fff; }
+.hamburger.active .hamburger-inner::before { top: 0; transform: rotate(90deg); background-color: #fff; }
+.hamburger.active .hamburger-inner::after { bottom: 0; display: none; }
+
+/* --- Estilos para o botão Coleta --- */
+.navigation .btn-coleta {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.hamburger.active .hamburger-inner::before {
-  top: 0;
-  transform: rotate(90deg);
-  background-color: #fff; /* Garante que a barra seja branca */
+.navigation .btn-coleta:hover {
+  background-color: #1DAE54;
+  color: white;
 }
 
-.hamburger.active .hamburger-inner::after {
-  bottom: 0;
-  display: none; /* Sua animação original */
+@media (max-width: 768px) {
+  .navigation ul a.btn-coleta {
+    background-color: #25D366;
+    margin: 10px 20px 0;
+    border-radius: 5px;
+  }
+
+  .navigation ul a.btn-coleta:hover {
+    background-color: #1DAE54;
+    color: white;
+  }
 }
