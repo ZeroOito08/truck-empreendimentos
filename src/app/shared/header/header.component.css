@@ -2,9 +2,6 @@
 .site-header {
   background-color: #f29201; /* Seu fundo laranja */
   padding: 10px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .header-container {
