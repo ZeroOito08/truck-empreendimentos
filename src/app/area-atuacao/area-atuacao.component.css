@@ -14,6 +14,13 @@
   min-width: 300px;
 }
 
+.mapa-container {
+  order: 1;
+}
+
+.texto-container {
+  order: 2;
+}
 
 .texto-container h2 {
   font-size: 2.5rem;
@@ -23,11 +30,11 @@
 }
 
 .highlight {
-    color: #ff9800; /* Laranja */
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 8px;
+  color: #ff9800; /* Laranja */
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
 }
 
 .texto-container p {
@@ -35,24 +42,6 @@
   line-height: 1.6;
   color: #555;
   margin-bottom: 30px;
-}
-
-.legenda {
-  margin-top: 20px;
-}
-
-.legenda-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.cor-legenda {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 10px;
 }
 
 .info-adicional {
@@ -65,18 +54,46 @@
   height: 500px;
 }
 
-.mapa-container {
-  order: 1; /* O mapa será o primeiro item */
+/* --- ESTILOS CORRIGIDOS E UNIFICADOS PARA A LEGENDA --- */
+
+.legenda {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Espaçamento entre os itens da legenda */
 }
 
-.texto-container {
-  order: 2; /* O texto será o segundo item */
+.legenda-item {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  font-size: 1rem;
 }
 
-/* Em telas pequenas, volta ao layout vertical padrão */
+/* A "caixa" com largura fixa que garante o alinhamento */
+.legenda-simbolo {
+  width: 35px; /* Largura fixa da caixa do símbolo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; /* Espaço entre a caixa e o texto */
+}
+
+.cor-legenda {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.legenda-icone {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   .mapa-container,
   .texto-container {
-    order: 0; /* Reseta a ordem */
+    order: 0; /* Reseta a ordem em telas pequenas */
   }
-}  
+}
