@@ -34,7 +34,7 @@
     </div>
 
     <div class="form-coluna">
-      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <form action="https://formspree.io/f/mzzvrabv" method="POST" #contactForm="ngForm">
         <div class="form-group">
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required ngModel>
@@ -51,7 +51,7 @@
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required ngModel></textarea>
         </div>
-        <button type="submit" [disabled]="!contactForm.valid">Enviar Mensagem</button>
+        <button type="submit">Enviar Mensagem</button>
       </form>
     </div>
 
