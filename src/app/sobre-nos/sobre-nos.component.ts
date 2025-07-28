@@ -5,9 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
-  selector: 'app-sobre-nos',
-  templateUrl: './sobre-nos.component.html',
-  styleUrls: ['./sobre-nos.component.css']
+    selector: 'app-sobre-nos',
+    templateUrl: './sobre-nos.component.html',
+    styleUrls: ['./sobre-nos.component.css'],
+    standalone: false
 })
 export class SobreNosComponent implements AfterViewInit {
 

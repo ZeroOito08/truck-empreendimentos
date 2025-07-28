@@ -11,14 +11,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
-  selector: 'app-coleta',
-  standalone: true, // Mantemos como standalone
-  imports: [
-    CommonModule,
-    ReactiveFormsModule // Importamos o ReactiveFormsModule aqui
-  ],
-  templateUrl: './coleta.component.html',
-  styleUrls: ['./coleta.component.css']
+    selector: 'app-coleta', // Mantemos como standalone
+    imports: [
+        CommonModule,
+        ReactiveFormsModule // Importamos o ReactiveFormsModule aqui
+    ],
+    templateUrl: './coleta.component.html',
+    styleUrls: ['./coleta.component.css']
 })
 export class ColetaComponent implements AfterViewInit {
 

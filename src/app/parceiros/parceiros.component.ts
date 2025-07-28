@@ -18,9 +18,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
-  selector: 'app-parceiros',
-  templateUrl: './parceiros.component.html',
-  styleUrls: ['./parceiros.component.css']
+    selector: 'app-parceiros',
+    templateUrl: './parceiros.component.html',
+    styleUrls: ['./parceiros.component.css'],
+    standalone: false
 })
 export class ParceirosComponent implements OnInit, AfterViewInit {
 

@@ -6,11 +6,10 @@ import am5geodata_brazilLow from '@amcharts/amcharts5-geodata/brazilLow';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
 @Component({
-  selector: 'app-area-atuacao',
-  standalone: true,
-  imports: [],
-  templateUrl: './area-atuacao.component.html',
-  styleUrls: ['./area-atuacao.component.css']
+    selector: 'app-area-atuacao',
+    imports: [],
+    templateUrl: './area-atuacao.component.html',
+    styleUrls: ['./area-atuacao.component.css']
 })
 export class AreaAtuacaoComponent implements AfterViewInit, OnDestroy {
   private root!: am5.Root;

@@ -7,9 +7,10 @@ import { CAROUSEL_SLIDES, CarouselSlide } from '../configs/carousel-config'
 Swiper.use([Navigation, Pagination, Autoplay]);
 
 @Component({
-  selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css']
+    selector: 'app-carousel',
+    templateUrl: './carousel.component.html',
+    styleUrls: ['./carousel.component.css'],
+    standalone: false
 })
 export class CarouselComponent implements AfterViewInit {
 

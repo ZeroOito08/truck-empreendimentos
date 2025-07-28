@@ -5,9 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'; // <-- 1. IMPORTAR O PLUGIN 
 gsap.registerPlugin(ScrollTrigger); // <-- 2. REGISTRAR O PLUGIN AQUI
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css'],
+    standalone: false
 })
 export class HomeComponent implements AfterViewInit {
 

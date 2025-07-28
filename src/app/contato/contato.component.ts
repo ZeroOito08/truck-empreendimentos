@@ -6,14 +6,13 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-contato',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule // Necessário para formulários reativos em componentes standalone
-  ],
-  templateUrl: './contato.component.html',
-  styleUrls: ['./contato.component.css']
+    selector: 'app-contato',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule // Necessário para formulários reativos em componentes standalone
+    ],
+    templateUrl: './contato.component.html',
+    styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent {
   contatoForm: FormGroup;
