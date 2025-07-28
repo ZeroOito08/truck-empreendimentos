@@ -1,16 +1,15 @@
 // src/app/contato/contato.component.ts
 
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-contato',
     imports: [
-        CommonModule,
-        ReactiveFormsModule // Necessário para formulários reativos em componentes standalone
-    ],
+    ReactiveFormsModule
+],
     templateUrl: './contato.component.html',
     styleUrls: ['./contato.component.css']
 })

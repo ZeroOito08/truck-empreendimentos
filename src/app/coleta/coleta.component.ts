@@ -1,7 +1,7 @@
 // src/app/coleta/coleta.component.ts (Versão Corrigida)
 
 import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 // IMPORTS CORRIGIDOS E ADICIONADOS:
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -13,9 +13,8 @@ gsap.registerPlugin(ScrollTrigger);
 @Component({
     selector: 'app-coleta', // Mantemos como standalone
     imports: [
-        CommonModule,
-        ReactiveFormsModule // Importamos o ReactiveFormsModule aqui
-    ],
+    ReactiveFormsModule
+],
     templateUrl: './coleta.component.html',
     styleUrls: ['./coleta.component.css']
 })

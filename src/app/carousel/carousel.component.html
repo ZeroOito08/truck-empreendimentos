@@ -1,10 +1,12 @@
 <div class="swiper-container">
   <div class="swiper-wrapper">
     <!-- O *ngFor cria um slide para cada item no nosso array 'slides' -->
-    <div *ngFor="let slide of slides" class="swiper-slide">
-      <img [src]="slide.src" [alt]="slide.alt">
-      <div class="slide-text">{{ slide.text }}</div>
-    </div>
+    @for (slide of slides; track slide) {
+      <div class="swiper-slide">
+        <img [src]="slide.src" [alt]="slide.alt">
+        <div class="slide-text">{{ slide.text }}</div>
+      </div>
+    }
   </div>
 
   <!-- Controles do Swiper permanecem os mesmos -->

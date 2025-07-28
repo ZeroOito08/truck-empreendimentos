@@ -1,18 +1,18 @@
 <!-- <section class="parceiros-section">
-  <h2>Nossos Parceiros</h2>
-  <div class="scroller" data-animated="true">
-    <ul class="scroller__inner">
-      <li><img src="assets/images/parceiros/parceiro_logo_anip.png" alt="ANIP"></li>
-      <li><img src="assets/images/parceiros/parceiro_logo_ciplan.png" alt="CIPLAN"></li>
-      <li><img src="assets/images/parceiros/parceiro_logo_greenplat.png" alt="GreenPlat"></li>
-      <li><img src="assets/images/parceiros/parceiro_logo_grupo_cbl.png" alt="Grupo CBL"></li>
-      <li><img src="assets/images/parceiros/parceiro_logo_interag.png" alt="INTERAG"></li>
-      <li><img src="assets/images/parceiros/parceiro_logo_reciclanip.png" alt="RECICLANIP"></li>
-      <li><img src="assets/images/parceiros/parceiro_logo_sindirecicle.png" alt="Sindirecicle"></li>
-      <li><img src="assets/images/parceiros/parceiro_logo_verdera.png" alt="Verdera"></li>
-      <li><img src="assets/images/parceiros/parceiro_logo_votorantim.png" alt="Votorantim"></li>
-    </ul>
-  </div>
+<h2>Nossos Parceiros</h2>
+<div class="scroller" data-animated="true">
+  <ul class="scroller__inner">
+    <li><img src="assets/images/parceiros/parceiro_logo_anip.png" alt="ANIP"></li>
+    <li><img src="assets/images/parceiros/parceiro_logo_ciplan.png" alt="CIPLAN"></li>
+    <li><img src="assets/images/parceiros/parceiro_logo_greenplat.png" alt="GreenPlat"></li>
+    <li><img src="assets/images/parceiros/parceiro_logo_grupo_cbl.png" alt="Grupo CBL"></li>
+    <li><img src="assets/images/parceiros/parceiro_logo_interag.png" alt="INTERAG"></li>
+    <li><img src="assets/images/parceiros/parceiro_logo_reciclanip.png" alt="RECICLANIP"></li>
+    <li><img src="assets/images/parceiros/parceiro_logo_sindirecicle.png" alt="Sindirecicle"></li>
+    <li><img src="assets/images/parceiros/parceiro_logo_verdera.png" alt="Verdera"></li>
+    <li><img src="assets/images/parceiros/parceiro_logo_votorantim.png" alt="Votorantim"></li>
+  </ul>
+</div>
 </section> -->
 
 <section id="parceiros" class="parceiros-section" #sectionTitle>
@@ -21,9 +21,11 @@
   <div class="slider">
     <div class="slide-track">
 
-      <div class="slide" *ngFor="let parceiro of parceirosAnimados">
-        <img [src]="parceiro.logo" [alt]="parceiro.nome">
-      </div>
+      @for (parceiro of parceirosAnimados; track parceiro) {
+        <div class="slide">
+          <img [src]="parceiro.logo" [alt]="parceiro.nome">
+        </div>
+      }
 
     </div>
   </div>
