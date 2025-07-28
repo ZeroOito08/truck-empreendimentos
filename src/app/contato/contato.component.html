@@ -33,27 +33,33 @@
       </a>
     </div>
 
-    <div class="form-coluna">
-      <form action="https://formspree.io/f/mzzvrabv" method="POST" #contactForm="ngForm">
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required ngModel>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required ngModel>
-        </div>
-        <div class="form-group">
-          <label for="telefone">Telefone</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required ngModel>
-        </div>
-        <div class="form-group">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required ngModel></textarea>
-        </div>
-        <button type="submit" [disabled]="!contactForm.form.valid" class="btn-primary-coleta">Enviar Mensagem</button>
-      </form>
-    </div>
+   <div class="form-coluna">
+    <form action="https://formspree.io/f/mzzvrabv" method="POST">
+      
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" name="nome" placeholder="Seu nome completo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="seuemail@exemplo.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input id="telefone" type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary-contato">Enviar Mensagem</button>
+
+    </form>
+  </div>
 
   </div>
 </section>
