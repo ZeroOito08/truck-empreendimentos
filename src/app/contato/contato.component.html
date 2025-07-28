@@ -14,7 +14,7 @@
   <div class="contato-container">
 
     <div class="info-coluna">
-      <h2>Entre em Contato</h2>
+      <h2>Nosso <span class="highlight">Contato</span></h2>
       <p>Estamos prontos para atender você. Escolha um dos canais abaixo ou preencha o formulário ao lado.</p>
 
       <div class="info-item">
@@ -34,32 +34,39 @@
     </div>
 
    <div class="form-coluna">
-    <form action="https://formspree.io/f/mzzvrabv" method="POST">
-      
+    <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="nome">Nome</label>
-        <input id="nome" type="text" name="nome" placeholder="Seu nome completo" required>
+        <input id="nome" type="text" formControlName="nome" placeholder="Seu nome completo">
       </div>
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="seuemail@exemplo.com" required>
+        <input id="email" type="email" formControlName="email" placeholder="seuemail@exemplo.com">
       </div>
 
       <div class="form-group">
         <label for="telefone">Telefone</label>
-        <input id="telefone" type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+        <input id="telefone" type="tel" formControlName="telefone" placeholder="(XX) XXXXX-XXXX">
       </div>
 
       <div class="form-group">
         <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+        <textarea id="mensagem" formControlName="mensagem" rows="5" placeholder="Digite sua mensagem aqui..."></textarea>
       </div>
 
-      <button type="submit">Enviar Mensagem</button>
+      <button type="submit" class="btn-primary-contato" [disabled]="formSubmitting">
+        {{ formSubmitting ? 'Enviando...' : 'Enviar Mensagem' }}
+      </button>
 
+      <div *ngIf="formSuccess" class="form-message success">
+        Mensagem enviada com sucesso! Agradecemos o contato.
+      </div>
+      <div *ngIf="formError" class="form-message error">
+        Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.
+      </div>
     </form>
-  </div>
+   </div>
 
   </div>
 </section>

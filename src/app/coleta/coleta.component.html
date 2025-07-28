@@ -1,24 +1,68 @@
 <section id="coleta" class="coleta-section" #coletaSection>
-
-  <div class="coleta-top-section">
-    <div class="coleta-text-column">
-      <h2>Solicite uma<br><span class="highlight">Coleta Agora!</span></h2>
+  <div class="coleta-container">
+    <div class="info-coluna">
+      <h2>Solicite uma<br /><span class="highlight">Coleta Agora!</span></h2>
       <p>
-        Está pronto para fazer a diferença e dar aos seus pneus inservíveis um novo propósito? Entre em contato conosco e agende uma coleta. É rápido, fácil e o primeiro passo para um mundo mais sustentável.
+        Está pronto para fazer a diferença e dar aos seus pneus inservíveis um
+        novo propósito? Entre em contato conosco e agende uma coleta. É rápido,
+        fácil e o primeiro passo para um mundo mais sustentável.
       </p>
     </div>
 
-    <div class="coleta-form-column">
-      <form action="https://formspree.io/f/mrblqagw" method="POST" id="coleta-form">
-        <input type="text" name="nome" placeholder="Nome" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX" required />
-        <textarea name="mensagem" placeholder="Mensagem" rows="5"></textarea>
+    <div class="form-coluna">
+      <form [formGroup]="coletaForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="coleta-nome">Nome</label>
+          <input
+            id="coleta-nome"
+            type="text"
+            formControlName="nome"
+            placeholder="Seu nome completo"
+          />
+        </div>
 
-        <button type="submit" class="btn-primary-coleta">Solicitar Coleta</button>
+        <div class="form-group">
+          <label for="coleta-email">Email</label>
+          <input
+            id="coleta-email"
+            type="email"
+            formControlName="email"
+            placeholder="seuemail@exemplo.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="coleta-telefone">Telefone</label>
+          <input
+            id="coleta-telefone"
+            type="tel"
+            formControlName="telefone"
+            placeholder="(XX) XXXXX-XXXX"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="coleta-mensagem">Mensagem</label>
+          <textarea
+            id="coleta-mensagem"
+            formControlName="mensagem"
+            rows="5"
+            placeholder="Descreva os pneus e a quantidade para coleta..."
+          ></textarea>
+        </div>
+
+        <button type="submit" [disabled]="formSubmitting">
+          {{ formSubmitting ? 'Enviando...' : 'Solicitar Coleta' }}
+        </button>
+
+        <div *ngIf="formSuccess" class="form-message success">
+          Solicitação enviada com sucesso! Entraremos em contato em breve.
+        </div>
+        <div *ngIf="formError" class="form-message error">
+          Ocorreu um erro ao enviar a solicitação. Tente novamente mais tarde.
+        </div>
       </form>
     </div>
-
   </div>
 
   <div class="wavy-divider"></div>
@@ -27,22 +71,46 @@
     <h2>Pontos de <span class="highlight">Coleta</span></h2>
 
     <div class="ponto-item">
-      <img src="assets/logo_truck_reciclagem_coleta.png" alt="Ícone de reciclagem" class="ponto-icon">
+      <img
+        src="assets/logo_truck_reciclagem_coleta.png"
+        alt="Ícone de reciclagem"
+        class="ponto-icon"
+      />
       <div class="ponto-info">
         <h3>Ponto de Coleta SAPEZAL-MT</h3>
-        <p>Localizado: Rua Projetada CSE, Loteamento Comercial Hilario Dal Alba Scariote, Zona Industrial - CEP 78365-000 Sapezal - MT – Fone: (65) 99232-6475</p>
+        <p>
+          Localizado: Rua Projetada CSE, Loteamento Comercial Hilario Dal Alba
+          Scariote, Zona Industrial - CEP 78365-000 Sapezal - MT – Fone: (65)
+          99232-6475
+        </p>
       </div>
-      <a class="map-button" href="https://www.google.com/maps/search/?api=1&query=-13.543912063717162, -58.7876749947243" target="_blank">VER MAPA</a>
+      <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=-12.986695, -58.7876749947243"
+        target="_blank"
+        >VER MAPA</a
+      >
     </div>
 
     <div class="ponto-item">
-      <img src="assets/logo_truck_reciclagem_coleta.png" alt="Ícone de reciclagem" class="ponto-icon">
+      <img
+        src="assets/logo_truck_reciclagem_coleta.png"
+        alt="Ícone de reciclagem"
+        class="ponto-icon"
+      />
       <div class="ponto-info">
-        <h3>Ponto de Coleta JUARA-MT</h3>
-        <p>Localizado: Avenida Comendador Rodolfo Ferro, 1414, Jardim Panorama, Juara - MT – Fone: (65) 99232-6475</p>
+        <h3>Ponto de Coleta CUIABÁ-MT</h3>
+        <p>
+          Localizado: Rua F, Quadra 04, Lote 02, Bairro Distrito Industrial -
+          CEP 78098-340 Cuiabá - MT - Fone: (65) 99232-6475
+        </p>
       </div>
-      <a class="map-button" href="https://www.google.com/maps/search/?api=1&query=-11.253972780913902, -57.51559945026882" target="_blank">VER MAPA</a>
+      <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=-15.632296, -56.033621"
+        target="_blank"
+        >VER MAPA</a
+      >
     </div>
   </div>
-
 </section>

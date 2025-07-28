@@ -1,143 +1,157 @@
-/* src/app/coleta/coleta.component.css */
+/* src/app/coleta/coleta.component.css (Versão Corrigida) */
 
 .coleta-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9; /* Fundo suave para a seção */
+}
+
+.coleta-container {
   display: flex;
-  flex-direction: column; /* Organiza as seções principais verticalmente */
   max-width: 1200px;
-  margin: 40px auto;
-  padding: 40px;
+  margin: 0 auto;
+  gap: 3rem; /* Espaço entre as colunas */
+  flex-wrap: wrap; /* Para responsividade */
 }
 
-/* --- Seção Superior (Formulário) --- */
-
-.coleta-top-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  position: relative; 
-  padding-bottom: 20px; 
-}
-
-.coleta-text-column,
-.coleta-form-column {
-  flex: 1; /* Faz as duas colunas terem o mesmo tamanho */
+/* Coluna da Esquerda (Informações) */
+.info-coluna {
+  flex: 1;
   min-width: 300px;
 }
 
-.coleta-text-column {
-  text-align: right; /* Alinha todo o texto da coluna da esquerda à direita */
-}
-
-.coleta-text-column h2 {
+.info-coluna h2 {
   font-size: 2.8rem;
   font-weight: 900;
   line-height: 1.2;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.coleta-text-column p {
+.info-coluna p {
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
+  margin-bottom: 2rem;
 }
-
-h2 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 20px;
-    color: #000000;
-}
-
 
 .highlight {
   color: #ff9800; /* Laranja */
   text-decoration: underline;
-  text-decoration-color: #ff9800;
   text-decoration-style: wavy;
   text-decoration-thickness: 3px;
   text-underline-offset: 8px;
 }
 
-/* Inputs do Formulário */
-#coleta-form input,
-#coleta-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 20px; /* Borda um pouco menos redonda */
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  box-sizing: border-box;
+/* Coluna da Direita (Formulário) */
+.form-coluna {
+  flex: 1.5; /* Faz a coluna do formulário um pouco maior */
+  min-width: 320px;
 }
 
-/* --- Estilo do Botão de Coleta --- */
+.form-coluna form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-.btn-primary-coleta {
-  width: 100%; /* Ocupa a largura total da coluna do formulário */
-  padding: 15px;
-  border-radius: 30px;
-  border: none;
-  background-color: #ff9800;
-  color: #ffffff;
-  font-size: 1.2rem;
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
   font-weight: bold;
-  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f29201;
+  box-shadow: 0 0 5px rgba(242, 146, 1, 0.5);
+}
+
+.form-coluna button {
+  padding: 15px;
+  background-color: #f29201;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 10px; /* Espaçamento acima do botão */
 }
 
-.btn-primary-coleta:hover {
-  background-color: #e68a00;
+.form-coluna button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
+.form-coluna button:not(:disabled):hover {
+  background-color: #d88000;
+}
 
 /* --- Divisor Ondulado --- */
-
 .wavy-divider {
   width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
   height: 20px;
   border-bottom: 4px wavy #ff9800;
-  margin: 20px 0 40px 0; /* Espaçamento acima e abaixo */
 }
 
-
 /* --- Seção Inferior (Pontos de Coleta) --- */
-
 .pontos-container {
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
-  text-align: center; /* Centraliza o título "Pontos de Coleta" */
+  background-color: #ffffff;
+  text-align: center;
 }
 
 .pontos-container h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
   margin-bottom: 30px;
 }
 
 .ponto-item {
-  display: flex; /* Alinha ícone, texto e botão na horizontal */
+  display: flex;
   align-items: center;
   gap: 20px;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  text-align: left; /* Alinha o texto interno à esquerda */
+  text-align: left;
   box-sizing: border-box;
+  border: none;
 }
 
 .ponto-icon {
   width: 50px;
   height: 50px;
-  flex-shrink: 0; /* Impede que o ícone encolha */
+  flex-shrink: 0;
 }
 
 .ponto-info {
-  flex-grow: 1; /* Faz a info ocupar o espaço disponível */
+  flex-grow: 1;
 }
 
 .ponto-info h3 {
   margin: 0 0 5px 0;
   font-size: 1.1rem;
+  color: #333;
 }
 
 .ponto-info p {
@@ -147,24 +161,55 @@ h2 {
 }
 
 .map-button {
-    background-color: #ff9800;
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    white-space: nowrap;
+  background-color: #ff9800;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
+.map-button:hover {
+  background-color: #d88000;
+}
+
+/* Mensagens de feedback do formulário */
+.form-message {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .coleta-text-column {
-    text-align: center; /* Centraliza o texto em telas menores */
+@media (max-width: 992px) {
+  .coleta-container {
+    flex-direction: column;
   }
-  
-  .coleta-top-section {
-    padding-bottom: 0; /* Remove o padding extra */
+  .info-coluna {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .ponto-item {
+    flex-direction: column;
+    text-align: center;
   }
 }

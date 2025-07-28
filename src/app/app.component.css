@@ -1,11 +1,19 @@
-/* src/app/app.component.css (Versão Corrigida e Simplificada) */
+/* src/app/app.component.css (Versão Corrigida para Layout Principal) */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
 
-/* Estilos para o botão "Voltar ao Topo" */
+main {
+  flex: 1 0 auto;
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #f29201; /* Cor laranja principal */
+  background: #f29201;
   color: #fff;
   border: none;
   width: 50px;
@@ -30,5 +38,5 @@
 }
 
 .scroll-to-top:hover {
-  background: #333; /* Cor escura no hover */
+  background: #333;
 }

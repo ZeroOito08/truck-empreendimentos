@@ -11,6 +11,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ParceirosComponent } from './parceiros/parceiros.component';
 import { ColetaComponent } from './coleta/coleta.component';
 import { AreaAtuacaoComponent } from './area-atuacao/area-atuacao.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,18 @@ import { AreaAtuacaoComponent } from './area-atuacao/area-atuacao.component';
     SobreNosComponent,
     CarouselComponent,
     FooterComponent,
-    ParceirosComponent,
-    ColetaComponent
+    ParceirosComponent
+    
   ],
   imports: [
     BrowserModule,
     ContatoComponent,
-    AreaAtuacaoComponent
+    AreaAtuacaoComponent,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ColetaComponent,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
