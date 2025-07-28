@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truck Empreendimentos</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow: hidden;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1001;
+    }
+
+    header img {
+      max-height: 60px;
+    }
+
+    nav {
+      position: fixed;
+      top: 70px;
+      right: 10px;
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 10px;
+      display: block;
+      margin: 5px 0;
+    }
+
+    .content {
+      position: absolute;
+      top: 120px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #005baa;
+    }
+
+    .divider {
+      border-top: 2px dashed #ccc;
+      margin: 2rem 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea, button {
+      margin-bottom: 1rem;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #005baa;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #004080;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <script>
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+  </script>
+</head>
+<body>
+
+  <header>
+    <img src="logo-truck.png" alt="Truck Empreendimentos Logo">
+  </header>
+
+  <nav>
+    <a href="#truckpneus">Truck Pneus</a>
+    <a href="#truckimoveis">Truck Imóveis</a>
+    <a href="#truckenergia">Truck Energia</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="content">
+    <section id="truckpneus">
+      <h2>🚛 Truck Pneus</h2>
+      <p>Especialista em logística reversa de pneus inservíveis.</p>
+      <p>A Truck Pneus é referência no recebimento, armazenamento, triagem e destinação ambientalmente correta de pneus inservíveis. Trabalhamos em parceria com municípios juntamente com a Associação Reciclanip, garantindo que os resíduos sejam tratados com responsabilidade e conforme as normas ambientais.</p>
+      <div class="divider"></div>
+    </section>
+
+    <section id="truckimoveis">
+      <h2>🏢 Truck Imóveis</h2>
+      <p>Soluções em locação de apartamentos.</p>
+      <p>A Truck Imóveis oferece opções de aluguel mensal e hospedagens por meio de Airbnb, com foco em conforto, praticidade e localização estratégica. Ideal para quem busca moradia temporária ou está de passagem por nossas cidades de atuação.</p>
+      <div class="divider"></div>
+    </section>
+
+    <section id="truckenergia">
+      <h2>🔆 Truck Energia</h2>
+      <p>Tecnologia em energia solar.</p>
+      <p>A Truck Energia atua no setor de energia solar, oferecendo soluções inteligentes para residências, comércios e propriedades rurais. Trabalhamos com projetos personalizados, promovendo economia e sustentabilidade.</p>
+      <div class="divider"></div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form action="#" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
+
+</body>
+</html>
