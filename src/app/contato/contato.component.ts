@@ -15,15 +15,4 @@ import { FormsModule } from '@angular/forms';
 export class ContatoComponent {
 
   constructor() { }
-
-  /**
-   * Função chamada quando o formulário é enviado.
-   */
-  onSubmit() {
-    // Ação temporária para confirmar que o formulário funciona.
-    alert('Formulário enviado com sucesso!');
-
-    // No futuro, você pode adicionar aqui a lógica para
-    // enviar os dados para um servidor ou serviço de e-mail.
-  }
 }
