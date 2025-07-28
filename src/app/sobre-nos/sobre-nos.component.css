@@ -57,6 +57,7 @@ h2 {
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
+  align-self: center;
 }
 
 .fundador-esquerda h3,
