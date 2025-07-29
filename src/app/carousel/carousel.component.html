@@ -1,16 +1,10 @@
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <!-- O *ngFor cria um slide para cada item no nosso array 'slides' -->
-    @for (slide of slides; track slide) {
-      <div class="swiper-slide">
-        <img [src]="slide.src" [alt]="slide.alt">
-        <div class="slide-text">{{ slide.text }}</div>
-      </div>
-    }
-  </div>
-
-  <!-- Controles do Swiper permanecem os mesmos -->
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let slide of slides">
+    <div class="carousel-img-wrapper">
+      <img [src]="slide.src" [alt]="slide.alt">
+    </div>
+    <div class="carousel-caption">
+      <h3>{{ slide.text }}</h3>
+    </div>
+  </ng-template>
+</ngb-carousel>

@@ -1,38 +1,28 @@
 :host {
   display: block;
   width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
- 
 }
 
-.swiper-container {
+.carousel-img-wrapper {
+  height: 90vh; /* Altura padrão para desktop */
+  width: 100%;
+}
+
+.carousel-img-wrapper img {
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Cobre o espaço sem distorcer */
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Para posicionar o texto sobre a imagem */
+/* Ajustes para telas menores */
+@media (max-width: 1024px) {
+  .carousel-img-wrapper {
+    height: 600px;
+  }
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Garante que a imagem cubra todo o slide */
-}
-
-.slide-text {
-  position: absolute;
-  color: white;
-  font-size: 4rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
+@media (max-width: 768px) {
+  .carousel-img-wrapper {
+    height: 50vh;
+  }
 }

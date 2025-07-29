@@ -1,14 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-parceiros',
-//   templateUrl: './parceiros.component.html',
-//   styleUrl: './parceiros.component.css'
-// })
-// export class ParceirosComponent {
-
-// }
-
 // src/app/parceiros/parceiros.component.ts
 
 import { Component, OnInit, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
@@ -63,5 +52,11 @@ export class ParceirosComponent implements OnInit, AfterViewInit {
         toggleActions: 'play none none reset'
       }
     });
+  }
+
+   trackByParceiro(index: number, parceiro: any): string {
+    // Usamos o 'logo' como identificador único, mas adicionamos o 'index'
+    // para garantir que até os itens duplicados tenham uma chave única.
+    return `${index}-${parceiro.logo}`;
   }
 }
