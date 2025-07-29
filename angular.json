@@ -30,8 +30,9 @@
               "src/404.html"
             ],
             "styles": [
-              "node_modules/swiper/swiper-bundle.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@primeng/themes/lara-light-blue/theme.css",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [
