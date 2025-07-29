@@ -30,9 +30,7 @@
               "src/404.html"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/@primeng/themes/lara-light-blue/theme.css",
-              "node_modules/primeicons/primeicons.css"
+              "src/styles.css"
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [
